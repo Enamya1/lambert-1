@@ -41,11 +41,11 @@
 
 .light-background {
   --background-color: #f5f9fc;
-  --surface-color: #ffffff;
+  --surface-color: #070606;
 }
 
 .dark-background {
-  --background-color: #C7CFA0;
+  --background-color: #030301;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #bd5555;
@@ -53,7 +53,7 @@
 }
 
 .accent-background {
-  --background-color: #f54747;
+  --background-color: #030300;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #030300;
@@ -98,7 +98,7 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
+  background: #000000;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -150,7 +150,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgb(0, 0, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
@@ -428,7 +428,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: rgba(192, 0, 0, 0.795);
   font-size: 14px;
   position: relative;
 }
@@ -533,9 +533,9 @@ h6 {
   padding: 6px 8px;
   position: relative;
   border-radius: 4px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 1px solid color-mix(in srgb,hwb(0 2% 24% / 0.808) , transparent 40%);
   display: flex;
-  background-color: var(--background-color);
+  background-color: red;
   transition: 0.3s;
 }
 
@@ -547,7 +547,7 @@ h6 {
   border: 0;
   padding: 4px;
   width: 100%;
-  background-color: var(--background-color);
+  background-color :#e9e0e0  ;
   color: var(--default-color);
 }
 
@@ -601,7 +601,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
+  border: 6px solid #000000;
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
   width: 60px;
@@ -917,7 +917,7 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.959);
   padding: 50px 30px;
   transition: all 0.3s ease-in-out;
   height: 100%;
@@ -1351,7 +1351,7 @@ section,
 --------------------------------------------------------------*/
 .pricing .pricing-item {
   background-color: var(--surface-color);
-  box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 20px -2px rgba(2, 1, 1, 0.904);
   border-top: 4px solid var(--background-color);
   padding: 60px 40px;
   height: 100%;
@@ -1502,7 +1502,7 @@ section,
 --------------------------------------------------------------*/
 .contact .info-wrap {
   background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.952);
   padding: 30px;
 }
 
@@ -1552,7 +1552,7 @@ section,
   background-color: var(--surface-color);
   height: 100%;
   padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.842);
 }
 
 @media (max-width: 575px) {
@@ -1624,7 +1624,7 @@ section,
 .portfolio-details .portfolio-info {
   background-color: var(--surface-color);
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 30px rgba(202, 2, 2, 0.877);
 }
 
 .portfolio-details .portfolio-info h3 {
