@@ -3,41 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Split Screen Form</title>
     <style>
-        /* Center the form on the screen */
-        body {
+        /* Define CSS variables for colors */
+
+
+
+
+
+
+        /* colors 
+        EEEEEE
+        8E1616
+        D84040
+        ffffff
+         */
+        :root {
+            --primary-color: #8E1616;
+            --background-color: #eeeeee;
+            --form-background-color: rgba(104, 71, 71, 0.142);
+            --text-color: #000000;
+            --input-background-color: rgba(255, 255, 255, 0);
+            --input-text-color: #000000;
+            --placeholder-color: rgba(0, 0, 0, 0.5);
+            --border-color: #352f2f;
+            --link-color: #8E1616;
+            --link-hover-color: rgb(128, 0, 13);
+            --shadow-color: rgba(19, 19, 19, 0.151);
+        }
+
+        /* General styles */
+        body, html {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
+            height: 100%;
             font-family: Arial, sans-serif;
         }
 
-        /* Form styling (from Uiverse.io by Yaya12085) */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Left side - Form */
+        .form-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--background-color);
+            padding: 20px;
+        }
+
         .form {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            max-width: 450px; /* Increased width */
-            background-color: #fff;
-            padding: 20px;
+            max-width: 450px;
+            width: 100%;
+            padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: var(--form-background-color);
+            box-shadow: 0 4px 10px var(--shadow-color);
         }
 
         .title {
             font-size: 28px;
-            color: royalblue;
             font-weight: 600;
             letter-spacing: -1px;
             position: relative;
             display: flex;
             align-items: center;
             padding-left: 30px;
+            color: var(--primary-color);
+        }
+
+        .title::before {
+            width: 18px;
+            height: 18px;
+        }
+
+        .title::after {
+            width: 18px;
+            height: 18px;
+            animation: pulse 1s linear infinite;
         }
 
         .title::before,
@@ -48,98 +97,90 @@
             width: 16px;
             border-radius: 50%;
             left: 0px;
-            background-color: royalblue;
-        }
-
-        .title::before {
-            width: 18px;
-            height: 18px;
-            background-color: royalblue;
-        }
-
-        .title::after {
-            width: 18px;
-            height: 18px;
-            animation: pulse 1s linear infinite;
+            background-color: var(--primary-color);
         }
 
         .message,
         .signin {
-            color: rgba(88, 87, 87, 0.822);
-            font-size: 14px;
+            font-size: 16.5px;
+            color: var(--text-color);
         }
 
         .signin {
             text-align: center;
         }
 
-        .signin a {
-            color: royalblue;
+        .signin a:hover {
+            text-decoration: underline var(--link-hover-color);
+            color: rgb(201, 85, 85);
         }
 
-        .signin a:hover {
-            text-decoration: underline royalblue;
+        .signin a {
+            color: var(--link-color);
         }
 
         .flex {
             display: flex;
             width: 100%;
-            gap: 20px; /* Increased gap between Firstname and Lastname */
+            gap: 20px;
         }
 
         .form label {
             position: relative;
-            width: 100%; /* Ensure labels take full width */
         }
 
         .form label .input {
+            background-color: var(--input-background-color);
+            color: var(--input-text-color);
             width: 100%;
-            padding: 10px 10px 20px 10px;
+            padding: 20px 05px 05px 10px;
             outline: 0;
-            border: 1px solid rgba(105, 105, 105, 0.397);
+            border: 1px solid var(--border-color);
             border-radius: 10px;
         }
 
         .form label .input + span {
+            color: var(--placeholder-color);
             position: absolute;
             left: 10px;
-            top: 15px;
-            color: grey;
+            top: 0px;
             font-size: 0.9em;
             cursor: text;
             transition: 0.3s ease;
         }
 
         .form label .input:placeholder-shown + span {
-            top: 15px;
+            top: 12.5px;
             font-size: 0.9em;
+            opacity: 1; /* Show the label when placeholder is shown */
         }
 
-        .form label .input:focus + span,
-        .form label .input:valid + span {
-            top: 30px;
+        .form label .input:not(:placeholder-shown) + span,
+        .form label .input:focus + span {
+            opacity: 0; /* Hide the label when typing or when input is focused */
+            top: 0px;
             font-size: 0.7em;
-            font-weight: 600;
         }
 
-        .form label .input:valid + span {
-            color: green;
+        .input {
+            font-size: medium;
         }
 
         .submit {
             border: none;
             outline: none;
-            background-color: royalblue;
             padding: 10px;
             border-radius: 10px;
-            color: #fff;
+            color: white;
             font-size: 16px;
-            transition: 0.3s ease;
-            cursor: pointer;
+            transform: 0.3s ease;
+            background-color: rgb(0, 0, 0);
+            border: 1px solid var(--primary-color);
         }
 
         .submit:hover {
-            background-color: rgb(56, 90, 194);
+            background-color: var(--primary-color);
+            color: rgb(255, 255, 255);
         }
 
         @keyframes pulse {
@@ -153,40 +194,73 @@
                 opacity: 0;
             }
         }
+
+        /* Right side - Image */
+        .image-container {
+            flex: 1;
+            background-image: url('https://via.placeholder.com/800'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .image-container {
+                display: none; /* Hide the image on smaller screens */
+            }
+
+            .form-container {
+                flex: 1;
+                padding: 10px;
+            }
+
+            .form {
+                max-width: 100%;
+                box-shadow: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- From Uiverse.io by Yaya12085 -->
-    <form class="form">
-        <p class="title">Register</p>
-        <p class="message">Signup now and get full access to our app.</p>
-        <div class="flex">
-            <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>Firstname</span>
-            </label>
-
-            <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>Lastname</span>
-            </label>
+    <div class="container">
+        <!-- Left side - Form -->
+        <div class="form-container">
+            <form class="form">
+                <p class="title">Register</p>
+                <p class="message">Signup now and get full access to our app.</p>
+                <div class="flex">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input"  />
+                        <span>Firstname</span>
+                    </label>
+                    <label>
+                        <input required="" placeholder="" type="text" class="input" />
+                        <span>Lastname</span>
+                    </label>
+                </div>
+                <label>
+                    <input required="" placeholder="" type="email" class="input" />
+                    <span>Email</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="password" class="input" />
+                    <span>Password</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="password" class="input" />
+                    <span>Confirm password</span>
+                </label>
+                <button class="submit">Submit</button>
+                <p class="signin">Already have an account? <a href="#">Signin</a></p>
+            </form>
         </div>
 
-        <label>
-            <input required="" placeholder="" type="email" class="input">
-            <span>Email</span>
-        </label>
-
-        <label>
-            <input required="" placeholder="" type="password" class="input">
-            <span>Password</span>
-        </label>
-        <label>
-            <input required="" placeholder="" type="password" class="input">
-            <span>Confirm password</span>
-        </label>
-        <button class="submit">Submit</button>
-        <p class="signin">Already have an account? <a href="#">Signin</a></p>
-    </form>
+        <!-- Right side - Image -->
+        <div class="image-container"></div>
+    </div>
 </body>
 </html>

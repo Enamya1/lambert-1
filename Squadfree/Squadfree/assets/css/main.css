@@ -1739,3 +1739,27 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.login{ 
+  color: #09122C;
+  background-color: #eeeeee58;
+  border-radius: 5px;
+  margin-left:20px  ;
+  margin-right: 20px;
+}
+.sing_in{
+  color: #09122C;
+  background-color: #eeeeee5e;
+  border-radius: 5px;
+  margin-left: 0px;
+}
+
+
+.scrolled .sing_in {
+  color: #ffffff;
+  background-color: #f05b5b67;
+}
+.scrolled .login {
+  color: #ffffff;
+  background-color: #fad9d946;
+}
