@@ -207,3 +207,73 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+document.addEventListener('DOMContentLoaded', function() {
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  const portfolioItems = document.querySelectorAll('.isotope-container .portfolio-item');
+
+  showMoreBtn.addEventListener('click', function() {
+      portfolioItems.forEach(item => {
+          item.style.display = 'block'; // Show all items
+      });
+      showMoreBtn.style.display = 'none'; // Hide the button after showing all items
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  const portfolioItems = document.querySelectorAll('.isotope-container .portfolio-item');
+  const filterButtons = document.querySelectorAll('.portfolio-filters li');
+  const visibleItemsCount = 6; // Number of items to show initially
+
+  // Function to show/hide items based on the filter
+  function applyFilter(filter) {
+      let visibleItems = 0; // Counter for visible items
+
+      portfolioItems.forEach((item, index) => {
+          if (filter === '*' || item.classList.contains(filter.slice(1))) {
+              item.classList.add('visible'); // Show items matching the filter
+              if (visibleItems < visibleItemsCount) {
+                  item.style.display = 'block'; // Show only the first 6 items
+                  visibleItems++;
+              } else {
+                  item.style.display = 'none'; // Hide items beyond the first 6
+              }
+          } else {
+              item.classList.remove('visible'); // Hide items not matching the filter
+              item.style.display = 'none';
+          }
+      });
+
+      // Show or hide the "Show More" button based on the number of visible items
+      const totalVisibleItems = document.querySelectorAll('.isotope-container .portfolio-item.visible').length;
+      showMoreBtn.style.display = totalVisibleItems > visibleItemsCount ? 'block' : 'none';
+  }
+
+  // Add click event listeners to filter buttons
+  filterButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          const filter = this.getAttribute('data-filter');
+          applyFilter(filter);
+
+          // Update active class on filter buttons
+          filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+          this.classList.add('filter-active');
+      });
+  });
+
+  // Add click event listener to the "Show More" button
+  showMoreBtn.addEventListener('click', function () {
+      const visibleItemsArray = document.querySelectorAll('.isotope-container .portfolio-item.visible');
+      visibleItemsArray.forEach((item, index) => {
+          if (index >= visibleItemsCount) {
+              item.style.display = 'block'; // Show all hidden items
+          }
+      });
+
+      // Hide the "Show More" button after showing all items
+      showMoreBtn.style.display = 'none';
+  });
+
+  // Apply the default filter on page load
+  applyFilter('*');
+});

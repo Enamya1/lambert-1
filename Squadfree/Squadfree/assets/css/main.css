@@ -1763,3 +1763,10 @@ section,
   color: #ffffff;
   background-color: #fad9d946;
 }
+.isotope-container .portfolio-item {
+  display: none; /* Hide all items initially */
+}
+
+.isotope-container .portfolio-item:nth-child(-n+6) {
+  display: block; /* Show the first 6 items */
+}
