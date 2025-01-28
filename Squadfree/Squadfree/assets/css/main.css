@@ -1770,3 +1770,47 @@ section,
 .isotope-container .portfolio-item:nth-child(-n+6) {
   display: block; /* Show the first 6 items */
 }
+
+
+
+
+.portfolio-scrollable-container {
+  max-height: 800px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #dddddd00; /* Optional: Add a border for visual clarity */
+  padding: 10px; /* Optional: Add padding */
+
+}
+
+
+.portfolio-scrollable-container::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  border-radius: 20px;
+  height: 0px; /* Height of the horizontal scrollbar */
+}
+
+.portfolio-scrollable-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners */
+  border: 3px solid transparent; /* Transparent border */
+  background-clip: content-box; /* Ensures the background doesn't cover the border */
+}
+
+
+
+/* the more btn */
+.showMoreBtn{
+
+ color: #EEEEEE;
+ background-color: #D84040;
+border: none;
+border-radius: 20px;
+width: 50px;
+height: 50px;
+
+
+}
+.showMoreBtn:hover{
+  color: #EEEEEE;
+  background-color: #d8404090;
+}
