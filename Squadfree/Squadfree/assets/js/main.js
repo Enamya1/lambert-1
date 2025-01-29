@@ -277,3 +277,27 @@ document.addEventListener('DOMContentLoaded', function () {
   // Apply the default filter on page load
   applyFilter('*');
 });
+function scrollGrid(direction) {
+  const scrollableContainer = document.querySelector('.scrollable-container');
+  const gridItem = document.querySelector('.grid-item');
+  
+  if (!gridItem) return;
+
+  // Calculate item width including margins
+  const itemStyle = getComputedStyle(gridItem);
+  const itemWidth = gridItem.offsetWidth;
+  const itemMargin = parseFloat(itemStyle.marginLeft) + parseFloat(itemStyle.marginRight);
+  const totalItemWidth = itemWidth + itemMargin;
+
+  // Get gap between items
+  const containerStyle = getComputedStyle(scrollableContainer);
+  const gap = parseFloat(containerStyle.gap);
+
+  // Calculate scroll amount for 3 items
+  const scrollAmount = (totalItemWidth * 3) + (gap * 2);
+
+  scrollableContainer.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}

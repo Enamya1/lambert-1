@@ -277,130 +277,246 @@
 
       <!-- the produyct container  -->
       <div class="container">
-        <div class="portfolio-scrollable-container">
-          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".europe">A</li>
-                <li data-filter=".Asia">B</li>
-            </ul><!-- End Portfolio Filters -->
-    
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                <!-- Portfolio Items -->
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item europe">
-                    <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>App 1</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur</p>
-                        <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
-    
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-                    <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Product 1</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur</p>
-                        <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    </div>
-                </div><!-- End Portfolio Item -->
-    
-
-
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-                  <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                      <h4>Product 1</h4>
-                      <p>Lorem ipsum, dolor sit amet consectetur</p>
-                      <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-              </div>
-
-
-              <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                    <h4>Product 1</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-            </div>
-
-
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-          </div>
-
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-            <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-                <h4>Product 1</h4>
+        <!-- Navigation Buttons -->
+        <button class="nav-button left" onclick="scrollGrid(-1)">&#10094;</button>
+        <button class="nav-button right" onclick="scrollGrid(1)">&#10095;</button>
+      
+        <div class="scrollable-container">
+          <div class="grid-container">
+            <!-- Grid Items -->
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 1</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-          <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-              <h4>Product 1</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
-              <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-          </div>
-      </div>
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-        <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-            <h4>Product 1</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur</p>
-            <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-      <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-      <div class="portfolio-info">
-          <h4>Product 1</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur</p>
-          <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-      </div>
-  </div>
-  <div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-    <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-    <div class="portfolio-info">
-        <h4>Product 1</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur</p>
-        <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-    </div>
-</div>
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item Asia">
-  <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-  <div class="portfolio-info">
-      <h4>Product 1</h4>
-      <p>Lorem ipsum, dolor sit amet consectetur</p>
-      <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-  </div>
-</div>
-                <!-- Add more portfolio items here -->
-                <!-- Ensure you have at least 6 items initially visible -->
-    
-            </div><!-- End Portfolio Container -->
-    
-            <!-- Button to show more items -->
-            <div class="text-center mt-4">
-                <button id="showMoreBtn" class="showMoreBtn">&#129158;</button>
+      
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
             </div>
+      
+
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+
+
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+      
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+            <div class="grid-item">
+              <img src="./assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <div class="item-info">
+                <h4>Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur</p>
+              </div>
+            </div>
+      
+            
+           
+          </div><!-- End Grid Container -->
         </div>
-    </div>
-        </div>
+      </div>
         
       <!-- ########################################################################################################################################################### -->
 

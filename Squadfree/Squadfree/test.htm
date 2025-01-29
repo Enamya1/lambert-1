@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollable Grid with Navigation</title>
+  <style>
+   .container {
+  position: relative; /* Make the container a positioning context for the buttons */
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.scrollable-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  gap: 20px;
+  position: relative; /* Ensure the buttons stay within the grid area */
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.grid-item {
+  flex: 0 0 auto;
+  margin: 20px;
+  width: 300px; /* Adjust the width as needed */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.item-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.item-info h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.item-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.nav-button {
+  position: absolute; /* Position buttons relative to the container */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.nav-button.left {
+  left: 0; /* Position the left button at the edge of the container */
+}
+
+.nav-button.right {
+  right: 0; /* Position the right button at the edge of the container */
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hide scrollbar for a cleaner look */
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+  </style>
+</head>
+<body>
+  <!-- HTML Structure -->
+  <div class="container">
+    <!-- Navigation Buttons -->
+    <button class="nav-button left" onclick="scrollGrid(-1)">&#10094;</button>
+    <button class="nav-button right" onclick="scrollGrid(1)">&#10095;</button>
+  
+    <div class="scrollable-container">
+      <div class="grid-container">
+        <!-- Grid Items -->
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="">
+          <div class="item-info">
+            <h4>Item 1</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+  
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="">
+          <div class="item-info">
+            <h4>Item 2</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+  
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="">
+          <div class="item-info">
+            <h4>Item 3</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+  
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="">
+          <div class="item-info">
+            <h4>Item 4</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+  
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="">
+          <div class="item-info">
+            <h4>Item 5</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+  
+        <div class="grid-item">
+          <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="">
+          <div class="item-info">
+            <h4>Item 6</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
+          </div>
+        </div>
+      </div><!-- End Grid Container -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function scrollGrid(direction) {
+      const scrollableContainer = document.querySelector('.scrollable-container');
+      const gridItem = document.querySelector('.grid-item');
+      
+      if (!gridItem) return;
+
+      // Calculate item width including margins
+      const itemStyle = getComputedStyle(gridItem);
+      const itemWidth = gridItem.offsetWidth;
+      const itemMargin = parseFloat(itemStyle.marginLeft) + parseFloat(itemStyle.marginRight);
+      const totalItemWidth = itemWidth + itemMargin;
+
+      // Get gap between items
+      const containerStyle = getComputedStyle(scrollableContainer);
+      const gap = parseFloat(containerStyle.gap);
+
+      // Calculate scroll amount for 3 items
+      const scrollAmount = (totalItemWidth * 3) + (gap * 2);
+
+      scrollableContainer.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>
