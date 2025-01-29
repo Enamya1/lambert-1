@@ -312,6 +312,15 @@ h6 {
     cursor: pointer;
     transition: color 0.3s;
   }
+  .login{
+    background-color: #EEEEEE;
+    position: relative;
+    margin-right: 20px;
+  }
+  .sing_in{
+    background-color: #EEEEEE;
+  }
+
 
   .navmenu {
     padding: 0;
